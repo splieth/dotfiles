@@ -1,0 +1,16 @@
+# VIM 4 the win
+export EDITOR='vim';
+
+# History
+export HISTSIZE='32768';
+export HISTFILESIZE="${HISTSIZE}";
+# Omit duplicates and commands that begin with a space from history.
+export HISTCONTROL='ignoreboth';
+
+# Lang
+export LANG='en_US.UTF-8';
+export LC_ALL='en_US.UTF-8';
+
+# oh-my-zsh
+export ZSH=/Users/splieth/.oh-my-zsh
+
