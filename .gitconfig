@@ -1,0 +1,22 @@
+[user]
+  email = matthias@splieth.com
+  name = Matthias Splieth
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[push]
+  default = upstream
+
+[pull]
+    default = current
+
+[diff]
+  memonicprefix = true
