@@ -38,4 +38,6 @@ alias map="xargs -n1"
 # Kill chrome
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
+# Folder action
+alias projects="cd /Users/splieth/Projects"
 
