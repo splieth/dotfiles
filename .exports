@@ -12,5 +12,8 @@ export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 
 # oh-my-zsh
-export ZSH=/Users/splieth/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
+# Go home
+export GOPATH=$HOME/work
 
