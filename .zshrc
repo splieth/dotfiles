@@ -39,3 +39,7 @@ autoload -U compinit
 compinit
 
 plugins=(git bundler osx vagrant brew)
+
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
