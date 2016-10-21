@@ -22,5 +22,6 @@
   memonicprefix = true
 
 [alias]
-	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
+  lol = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
+  yolo = !git commit -am \"DEAL WITH IT\" && git push -f origin master
 
