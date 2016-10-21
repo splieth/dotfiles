@@ -20,3 +20,7 @@
 
 [diff]
   memonicprefix = true
+
+[alias]
+	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
+
