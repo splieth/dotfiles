@@ -5,6 +5,14 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
+function status() {
+  if [ -z ${1} ]; then
+    echo "You forgot the url dude..."
+    exit 1
+  fi
+  curl -s -o /dev/null -w "%{http_code}" ${1} | sed s/%//g
+}
+
 # Determine size of a file or total size of a directory
 function fs() {
 	if du -b /dev/null > /dev/null 2>&1; then
