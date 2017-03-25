@@ -22,6 +22,13 @@
   memonicprefix = true
 
 [alias]
+  ci = commit
   lol = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
   yolo = !git commit -am \"DEAL WITH IT\" && git push -f origin master
+  co = checkout
+  wip = commit -am "WIP"
+  undo = reset HEAD~1 --mixed
+  amend = commit -a --amend
 
+[core]
+	excludesfile = ~/.gitignore

@@ -41,3 +41,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Folder action
 alias projects="cd /Users/splieth/Projects"
 
+# PAIRING WONDERLAND
+alias gup="git pull -r"
+alias gp="git push"
+alias gupp="git pull -r && git push"
