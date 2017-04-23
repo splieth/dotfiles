@@ -42,9 +42,6 @@ compinit
 
 plugins=(git bundler osx vagrant brew)
 
-# load direnv
-eval "$(direnv hook zsh)"
-
 # work stuff
 if [ -e $HOME/.ottorc ]; then
   source $HOME/.ottorc
@@ -52,3 +49,6 @@ fi
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# load direnv
+eval "$(direnv hook zsh)"
