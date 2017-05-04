@@ -42,8 +42,6 @@ compinit
 
 plugins=(git bundler osx vagrant brew)
 
-source $HOME/.awsrc
-
 # work stuff
 if [ -e $HOME/.ottorc ]; then
   source $HOME/.ottorc
