@@ -52,3 +52,6 @@ fi
 
 # load direnv
 eval "$(direnv hook zsh)"
+
+# load jenv
+if command -v jenv > /dev/null; then eval "$(jenv init -)"; fi
