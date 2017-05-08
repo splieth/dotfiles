@@ -55,3 +55,10 @@ eval "$(direnv hook zsh)"
 
 # load jenv
 if command -v jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+# set GRADLE_HOME
+GRADLE=$(command -v gradle)
+if [ ${GRADLE} != "" ]; then
+  gradle_path=$(realpath ${GRADLE})
+  export GRADLE_HOME=$(sed 's/\/bin\/gradle//g' <<< ${gradle_path})
+fi
