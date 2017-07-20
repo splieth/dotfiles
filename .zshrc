@@ -62,3 +62,6 @@ if [ ${GRADLE} != "" ]; then
   gradle_path=$(realpath ${GRADLE})
   export GRADLE_HOME=$(sed 's/\/bin\/gradle//g' <<< ${gradle_path})
 fi
+
+# aws cli
+. /usr/local/bin/aws_zsh_completer.sh
