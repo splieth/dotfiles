@@ -24,6 +24,7 @@ brew "bfg"
 brew "c-ares"
 brew "cli53"
 brew "coreutils"
+brew "curl", args: ["with-openssl"]
 brew "dbus"
 brew "direnv"
 brew "libgpg-error"
