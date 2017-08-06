@@ -45,3 +45,8 @@ alias projects="cd /Users/splieth/Projects"
 alias gup="git pull -r"
 alias gp="git push"
 alias gupp="git pull -r && git push"
+
+# Manage disk images
+alias disk-decrypt="hdiutil attach -stdinpass"
+alias disk-encrypt="hdiutil create -encryption -stdinpass -srcfolder"
+
