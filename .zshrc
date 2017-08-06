@@ -47,9 +47,6 @@ if [ -e $HOME/.ottorc ]; then
   source $HOME/.ottorc
 fi
 
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # load direnv
 eval "$(direnv hook zsh)"
 
@@ -65,3 +62,6 @@ fi
 
 # aws cli
 . /usr/local/bin/aws_zsh_completer.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
