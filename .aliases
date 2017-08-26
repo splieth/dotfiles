@@ -50,3 +50,10 @@ alias gupp="git pull -r && git push"
 alias disk-decrypt="hdiutil attach -stdinpass"
 alias disk-encrypt="hdiutil create -encryption -stdinpass -srcfolder"
 
+function disk-encrypt2() {
+  hdiutil create -type SPARSE -fs 'Case-sensitive Journaled HFS+' -size ${VOLUME_SIZE} -volname ${VOLUME_NAME} ${VOLUME_PATH}
+}
+
+# sort
+alias sort="gsort"
+
