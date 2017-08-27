@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Reload dotfiles
+alias reload=". ~/.zshrc"
+
 # Naviagtion
 alias ..="cd .."
 alias ...="cd ../.."
@@ -54,6 +57,6 @@ function disk-encrypt2() {
   hdiutil create -type SPARSE -fs 'Case-sensitive Journaled HFS+' -size ${VOLUME_SIZE} -volname ${VOLUME_NAME} ${VOLUME_PATH}
 }
 
-# sort
+# mac2gnu
 alias sort="gsort"
-
+alias tr="gtr"
