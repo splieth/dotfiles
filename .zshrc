@@ -1,4 +1,5 @@
-ZSH_THEME="agnoster"
+export ZSH="${HOME}/.oh-my-zsh"
+ZSH_THEME="splieth"
 
 DEFAULT_USER="splieth"
 
@@ -8,11 +9,14 @@ DEFAULT_USER="splieth"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
+# Language settings
+export LC_ALL=en_US.utf-8
+export LANG=en_US.utf-8
+
+plugins=(git bundler osx vagrant brew docker)
+
 # Source stuff
-for file in ~/.{path,exports,aliases,functions}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 # matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -40,16 +44,6 @@ setopt NO_NOMATCH # stop bailing on the command when it fails to match a glob pa
 autoload -U compinit
 compinit
 
-plugins=(git bundler osx vagrant brew)
-
-# work stuff
-if [ -e $HOME/.ottorc ]; then
-  source $HOME/.ottorc
-fi
-
-# load direnv
-eval "$(direnv hook zsh)"
-
 # load jenv
 if command -v jenv > /dev/null; then eval "$(jenv init -)"; fi
 
@@ -60,8 +54,36 @@ if [ ${GRADLE} != "" ]; then
   export GRADLE_HOME=$(sed 's/\/bin\/gradle//g' <<< ${gradle_path})
 fi
 
-# aws cli
-. /usr/local/bin/aws_zsh_completer.sh
+export JAVA_HOME=`/usr/libexec/java_home`
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# source aws cli as default virtualenv
+. $HOME/virtualenvs/awscli/bin/activate
+. $HOME/virtualenvs/awscli/bin/aws_zsh_completer.sh
+
+# Da fuck
+eval $(thefuck --alias)
+
+# autojump
+if [ -f /usr/local/etc/autojump.sh ]; then
+  source /usr/local/etc/autojump.sh
+fi
+
+# Set py compiler stuf
+export CPPFLAGS=-I/usr/local/opt/openssl/include
+export LDFLAGS=-L/usr/local/opt/openssl/lib
+
+# Groovy
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+# Anaconda
+. $HOME/miniconda3/etc/profile.d/conda.sh
+export PATH="$HOME/miniconda3/bin:$PATH"
+
+

@@ -1,8 +1,5 @@
 #!/usr/bin/env zsh
 
-# Reload dotfiles
-alias reload=". ~/.zshrc"
-
 # Naviagtion
 alias ..="cd .."
 alias ...="cd ../.."
@@ -29,7 +26,7 @@ command -v sha1sum > /dev/null || alias sha1sum="shasum"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-# Sporlight
+# Spotlight
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
@@ -40,14 +37,6 @@ alias map="xargs -n1"
 
 # Kill chrome
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
-
-# Folder action
-alias projects="cd /Users/splieth/Projects"
-
-# PAIRING WONDERLAND
-alias gup="git pull -r"
-alias gp="git push"
-alias gupp="git pull -r && git push"
 
 # Manage disk images
 alias disk-decrypt="hdiutil attach -stdinpass"

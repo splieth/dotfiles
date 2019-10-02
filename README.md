@@ -1,1 +1,1 @@
-counterliero's dotfiles
+My dotfiles
