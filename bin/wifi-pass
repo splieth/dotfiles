@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+ssid="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | sed -n "/ SSID:/s/^.\\{2,\\}: //p")"
+if [ -n "$ssid" ]; then
+  pw=$(sudo security find-generic-password -ga "$ssid" 2>&1 >/dev/null | cut -d\" -f2)
+  echo "Password for \"${ssid}\": ${pw}"
+else
+  echo "No current wifi network name detected" >&2
+  exit 1
+fi

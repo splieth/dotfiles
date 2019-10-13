@@ -1,5 +1,5 @@
 export ZSH="${HOME}/.oh-my-zsh"
-ZSH_THEME="splieth"
+ZSH_THEME="agnoster"
 
 DEFAULT_USER="splieth"
 
@@ -86,4 +86,5 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 . $HOME/miniconda3/etc/profile.d/conda.sh
 export PATH="$HOME/miniconda3/bin:$PATH"
 
-
+# personal bin folder
+export PATH="$HOME/bin:$PATH"
