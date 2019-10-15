@@ -49,19 +49,12 @@ if command -v jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # set GRADLE_HOME
 GRADLE=$(command -v gradle)
-if [ ${GRADLE} != "" ]; then
+if [ ! -z ${GRADLE} ]; then
   gradle_path=$(realpath ${GRADLE})
   export GRADLE_HOME=$(sed 's/\/bin\/gradle//g' <<< ${gradle_path})
 fi
 
 export JAVA_HOME=`/usr/libexec/java_home`
-
-# source aws cli as default virtualenv
-. $HOME/virtualenvs/awscli/bin/activate
-. $HOME/virtualenvs/awscli/bin/aws_zsh_completer.sh
-
-# Da fuck
-eval $(thefuck --alias)
 
 # autojump
 if [ -f /usr/local/etc/autojump.sh ]; then
@@ -82,9 +75,8 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
-# Anaconda
-. $HOME/miniconda3/etc/profile.d/conda.sh
-export PATH="$HOME/miniconda3/bin:$PATH"
+# files
+for file in ~/.{exports,aliases,functions}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
 
-# personal bin folder
-export PATH="$HOME/bin:$PATH"
