@@ -64,6 +64,7 @@ brew "leiningen"
 brew "libtool"
 brew "libu2f-host"
 brew "libusb-compat"
+brew "mas"
 brew "maven"
 brew "moreutils"
 brew "nmap"
@@ -126,3 +127,7 @@ cask "whatsapp"
 cask "wireshark"
 cask "zoomus"
 cask "adoptopenjdk/openjdk/adoptopenjdk11"
+mas "1Password", id: 443987910
+mas "Baldur's Gate II: Enhanced Edition", id: 746413884
+mas "Scrivener", id: 418889511
+mas "Tweetbot", id: 557168941
