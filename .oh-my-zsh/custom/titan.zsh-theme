@@ -51,7 +51,7 @@ CURRENT_BG='NONE'
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
 # rendering default background/foreground.
-prompt_segment() {
+function prompt_segment() {
   local bg fg
   [[ -n $1 ]] && bg="%K{$1}" || bg="%k"
   [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
@@ -65,7 +65,7 @@ prompt_segment() {
 }
 
 # End the prompt, closing any open segments
-prompt_end() {
+function prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
     echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
   else
@@ -79,14 +79,14 @@ prompt_end() {
 # Each component will draw itself, and hide itself if no information needs to be shown
 
 # Context: user@hostname (who am I and where am I)
-prompt_context() {
+function prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@%m"
   fi
 }
 
 # Git: branch/detached head, dirty status
-prompt_git() {
+function prompt_git() {
   (( $+commands[git] )) || return
   local PL_BRANCH_CHAR
   () {
@@ -128,8 +128,8 @@ prompt_git() {
   fi
 }
 
-# Git: branch/detached head, dirty status
-prompt_aws_profile() {
+# Git: currently assumed AWS profile
+function prompt_aws_profile() {
   if [ -z "${AWS_PROFILE}" ]; then
     return
   fi
@@ -153,7 +153,8 @@ prompt_aws_profile() {
   echo -n "${prompt_symbol} ${aws_profile}"
 }
 
-prompt_virtualenv() {
+# active venv
+function prompt_virtualenv() {
   if [ -z "${VIRTUAL_ENV}" ]; then
     return
   fi
@@ -167,7 +168,21 @@ prompt_virtualenv() {
   echo -n "$env_symbol $(basename ${virtualenv})"
 }
 
-prompt_bzr() {
+# active toolbox
+function prompt_toolbox() {
+  if [ -z "${ACTIVE_TOOLBOX}" ]; then
+    return
+  fi
+  local env_symbol="🔨"
+  prompt_segment 214 black
+
+  setopt promptsubst
+  autoload -Uz vcs_info
+
+  echo -n "$env_symbol $(basename ${ACTIVE_TOOLBOX})"
+}
+
+function prompt_bzr() {
     (( $+commands[bzr] )) || return
     if (bzr status >/dev/null 2>&1); then
         status_mod=`bzr status | head -n1 | grep "modified" | wc -m`
@@ -189,7 +204,7 @@ prompt_bzr() {
     fi
 }
 
-prompt_hg() {
+function prompt_hg() {
   (( $+commands[hg] )) || return
   local rev status
   if $(hg id >/dev/null 2>&1); then
@@ -226,7 +241,7 @@ prompt_hg() {
 }
 
 # Dir: current working directory
-prompt_dir() {
+function prompt_dir() {
   prompt_segment blue black '%~'
 }
 
@@ -234,7 +249,7 @@ prompt_dir() {
 # - was there an error
 # - am I root
 # - are there background jobs?
-prompt_status() {
+function prompt_status() {
   local symbols
   symbols=()
   [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘"
@@ -245,13 +260,14 @@ prompt_status() {
 }
 
 ## Main prompt
-build_prompt() {
+function build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_context
   prompt_dir
   prompt_virtualenv
   prompt_aws_profile
+  prompt_toolbox
   prompt_git
   prompt_bzr
   prompt_hg
