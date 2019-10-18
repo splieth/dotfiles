@@ -1,4 +1,5 @@
 tap "adoptopenjdk/openjdk"
+tap "graalvm/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -91,6 +92,7 @@ brew "zlib"
 brew "zsh"
 brew "zsh-completions"
 brew "vitorgalvao/tiny-scripts/cask-repair"
+cask "adobe-creative-cloud"
 cask "aerial"
 cask "alfred"
 cask "anaconda"
@@ -121,6 +123,7 @@ cask "wireshark"
 cask "xquartz"
 cask "zoomus"
 cask "adoptopenjdk/openjdk/adoptopenjdk11"
+cask "graalvm/tap/graalvm-ce"
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
