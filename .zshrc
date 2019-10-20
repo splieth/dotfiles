@@ -3,9 +3,6 @@ ZSH_THEME="titan"
 
 DEFAULT_USER="splieth"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
@@ -13,7 +10,7 @@ COMPLETION_WAITING_DOTS="true"
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
-plugins=(git bundler osx vagrant brew docker)
+plugins=(aws brew docker git go jenv pass pipenv)
 
 # Source stuff
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
@@ -26,23 +23,30 @@ zstyle ':completion:*' insert-tab pending
 
 # history settings
 export HISTFILE=$HOME/.zsh_history
-HISTSIZE=100000
-SAVEHIST=100000
-setopt APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_SPACE
-setopt EXTENDED_HISTORY
+export HISTSIZE=950000
+export SAVEHIST=950000
+setopt BANG_HIST              # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY       # Write the history file in the ":start:elapsed;command" format.
+setopt HIST_BEEP              # Beep when accessing nonexistent history.
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
+setopt HIST_FIND_NO_DUPS      # Do not display a line previously found.
+setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_IGNORE_DUPS       # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_SPACE      # Don't record an entry starting with a space.
+setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks before recording entry.
+setopt HIST_SAVE_NO_DUPS      # Don't write duplicate entries in the history file.
+setopt HIST_VERIFY            # Don't execute immediately upon history expansion.
+setopt INC_APPEND_HISTORY     # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY          # Share history between all sessions.
 
 #options
 set -o emacs
+setopt CORRECT       #spelling corrector
 setopt LOCAL_OPTIONS # allow functions to have local options
-setopt LOCAL_TRAPS # allow functions to have local traps
-setopt PROMPT_SUBST
-setopt NO_NOMATCH # stop bailing on the command when it fails to match a glob pattern
-
-autoload -U compinit
-compinit
+setopt LOCAL_TRAPS   # allow functions to have local traps
+setopt NO_NOMATCH    # stop bailing on the command when it fails to match a glob pattern
+setopt PROMPT_SUBST  # parameter expansion, command substitution and arithmetic expansion are performed in prompts
+setopt RM_STAR_WAIT  # sanity check for 'rm *'
 
 # load jenv
 if command -v jenv > /dev/null; then eval "$(jenv init -)"; fi
@@ -53,8 +57,10 @@ if [ ! -z ${GRADLE} ]; then
   gradle_path=$(realpath ${GRADLE})
   export GRADLE_HOME=$(sed 's/\/bin\/gradle//g' <<< ${gradle_path})
 fi
-
 export JAVA_HOME=`/usr/libexec/java_home`
+
+# Groovy
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 # autojump
 if [ -f /usr/local/etc/autojump.sh ]; then
@@ -64,9 +70,6 @@ fi
 # Set py compiler stuf
 export CPPFLAGS=-I/usr/local/opt/openssl/include
 export LDFLAGS=-L/usr/local/opt/openssl/lib
-
-# Groovy
-export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -79,4 +82,3 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 for file in ~/.{exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
-

@@ -2,11 +2,17 @@
 
 # Create a new directory and enter it
 function mkd() {
-	mkdir -p "$@" && cd "$_";
+	  if [ ! -n "$1" ]; then
+    echo "Usage: $0 <dir name>"
+    return
+  fi
+
+  mkdir -p "$1" && cd "$1" || exit
 }
 
+# Get only http status code from curl
 function status() {
-  if [ -z ${1} ]; then
+  if [ -z "${1}" ]; then
     echo "You forgot the url dude..."
     exit 1
   fi
