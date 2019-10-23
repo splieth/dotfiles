@@ -111,11 +111,14 @@ cask "firefox"
 cask "flycut"
 cask "gimp"
 cask "google-chrome"
+cask "gpg-suite"
 cask "iterm2"
+cask "itsycal"
 cask "jetbrains-toolbox"
 cask "mactex"
 cask "microsoft-teams"
 cask "postman"
+cask "signal"
 cask "silverlight"
 cask "skim"
 cask "slack"
@@ -123,6 +126,7 @@ cask "sonos"
 cask "spotify"
 cask "tunnelblick"
 cask "upterm"
+cask "visual-studio-code"
 cask "whatsapp"
 cask "wireshark"
 cask "xquartz"
@@ -133,3 +137,4 @@ mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Things", id: 904280696
