@@ -42,8 +42,11 @@ function spoof-mac-address() {
 # Select a specific toolbox in ~/.bin
 function toolbox() {
   local toolbox="${1}"
+  export ACTIVE_TOOLBOX=${toolbox}
   if [[ -d "$HOME/.bin/$toolbox" ]]; then
-    export ACTIVE_TOOLBOX=${toolbox}
     export PATH="$PATH:$HOME/.bin/$toolbox"
+  fi
+  if [[ -f "${HOME}/.${toolbox}.inc" ]]; then
+    source "${HOME}/.${toolbox}.inc"
   fi
 }
