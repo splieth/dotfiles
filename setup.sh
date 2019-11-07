@@ -10,6 +10,7 @@ function doIt() {
 		--exclude ".idea" \
 		--exclude "setup.sh" \
 		--exclude "README.md" \
+		--exclude "Brewfile" \
 		-avh --no-perms . ~;
 	source ~/.zshrc;
 }

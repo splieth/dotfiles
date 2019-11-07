@@ -141,16 +141,16 @@ function prompt_aws_profile() {
 
   if [[ $aws_profile =~ admin$ ]]; then
     prompt_segment 196 black
-    prompt_symbol=$'\u21af'
+    prompt_symbol="☠️"
   else
     prompt_segment 214 black
-    prompt_symbol=$'\u262e'
+    prompt_symbol="☁️"
   fi
 
   setopt promptsubst
   autoload -Uz vcs_info
 
-  echo -n "${prompt_symbol} ${aws_profile}"
+  echo -n "${prompt_symbol}  ${aws_profile}"
 }
 
 # active venv
@@ -173,13 +173,13 @@ function prompt_toolbox() {
   if [ -z "${ACTIVE_TOOLBOX}" ]; then
     return
   fi
-  local env_symbol="🔨"
-  prompt_segment 214 black
+  local env_symbol="🛠"
+  prompt_segment 130 black
 
   setopt promptsubst
   autoload -Uz vcs_info
 
-  echo -n "$env_symbol $(basename ${ACTIVE_TOOLBOX})"
+  echo -n "$env_symbol  $(basename ${ACTIVE_TOOLBOX})"
 }
 
 function prompt_bzr() {
