@@ -10,7 +10,7 @@ COMPLETION_WAITING_DOTS="true"
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
-plugins=(aws brew docker git go helm jenv kubectl pass pipenv)
+plugins=(aws brew docker gcloud git go helm jenv kubectl pass pipenv)
 
 # Source stuff
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
