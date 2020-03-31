@@ -82,3 +82,4 @@ export LDFLAGS=-L/usr/local/opt/openssl/lib
 for file in ~/.{exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+source <(gopass completion bash)
