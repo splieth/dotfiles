@@ -57,7 +57,7 @@ if [ ! -z ${GRADLE} ]; then
   gradle_path=$(realpath ${GRADLE})
   export GRADLE_HOME=$(sed 's/\/bin\/gradle//g' <<< ${gradle_path})
 fi
-export JAVA_HOME=`/usr/libexec/java_home`
+# export JAVA_HOME=`/usr/libexec/java_home`
 
 # Groovy
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
