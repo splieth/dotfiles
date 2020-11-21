@@ -12,6 +12,9 @@ export LANG=en_US.utf-8
 
 plugins=(aws brew docker gcloud git go helm jenv kubectl pass pipenv)
 
+# Disable virtualenv left of prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=0
+
 # Source stuff
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
