@@ -1,6 +1,11 @@
 [user]
-  email = matthias@splieth.com
   name = Matthias Splieth
+  email = matthias@splieth.com
+
+[includeIf "gitdir:~/Projects/customers/"]
+  path = .gitconfig-work
+[includeIf "gitdir:~/Projects/betaset/"]
+  path = .gitconfig-work
 
 [color]
   branch = auto
@@ -17,6 +22,7 @@
 
 [pull]
   default = current
+  rebase = true
 
 [diff]
   memonicprefix = true
@@ -24,7 +30,6 @@
 [alias]
   lol = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
   yolo = !git commit -am \"DEAL WITH IT\" && git push -f origin master
-  co = checkout
   undo = reset HEAD~1 --mixed
 
 [core]
@@ -32,3 +37,6 @@
 
 [credential]
   UseHttpPath = true
+
+[gpg]
+	program = gpg

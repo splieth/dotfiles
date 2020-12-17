@@ -1,0 +1,6 @@
+[user]
+  email = ms@betaset.de
+  name = Matthias Splieth
+  signingkey = 9A2422A2F063E39019A1B4EE532B7322C897A026
+[commit]
+  gpgsign = true
