@@ -1,0 +1,4 @@
+location:Neu Wulmstorf,GER
+fetch_cmd:curl -sf
+units:metric
+show_daylight:true
