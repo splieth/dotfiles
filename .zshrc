@@ -15,6 +15,13 @@ plugins=(aws brew docker gcloud git go helm jenv kubectl pass pipenv)
 # Disable virtualenv left of prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=0
 
+# brew ZSH completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
+
 # Source stuff
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
