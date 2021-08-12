@@ -46,7 +46,7 @@ brew "coreutils"
 brew "cscope"
 brew "libunistring"
 brew "curl"
-brew "dbus"
+brew "dbus", restart_service: true
 brew "go"
 brew "dep"
 brew "dive"
@@ -104,11 +104,11 @@ brew "node"
 brew "nvm"
 brew "openfortivpn"
 brew "openshift-cli"
-brew "openvpn"
+brew "openvpn", restart_service: true
 brew "packer"
 brew "tree"
 brew "pass"
-brew "payara"
+brew "payara", restart_service: true
 brew "perl"
 brew "pgcli"
 brew "pinentry-mac"
@@ -132,7 +132,7 @@ brew "tfsec"
 brew "the_silver_searcher"
 brew "thefuck"
 brew "tig"
-brew "tomcat"
+brew "tomcat", restart_service: true
 brew "utf8proc"
 brew "vim"
 brew "watch"
@@ -210,11 +210,13 @@ cask "whatsapp"
 cask "wireshark"
 cask "xquartz"
 cask "zoom"
+mas "FitFileExplorer", id: 1244431640
 mas "Flashcard Hero", id: 650802274
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "MoneyMoney", id: 872698314
 mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
 mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
