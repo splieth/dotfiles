@@ -10,10 +10,13 @@ COMPLETION_WAITING_DOTS="true"
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
-plugins=(aws brew docker gcloud git go helm jenv kubectl pass pipenv)
+plugins=(aws brew docker gcloud git go helm kubectl pass pipenv)
 
 # Disable virtualenv left of prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=0
+
+# skdman
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # brew ZSH completion
 if type brew &>/dev/null; then
@@ -58,9 +61,6 @@ setopt NO_NOMATCH    # stop bailing on the command when it fails to match a glob
 setopt PROMPT_SUBST  # parameter expansion, command substitution and arithmetic expansion are performed in prompts
 setopt RM_STAR_WAIT  # sanity check for 'rm *'
 
-# load jenv
-if command -v jenv > /dev/null; then eval "$(jenv init -)"; fi
-
 # set GRADLE_HOME
 GRADLE=$(command -v gradle)
 if [ ! -z ${GRADLE} ]; then
@@ -98,3 +98,7 @@ source <(gopass completion bash)
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
