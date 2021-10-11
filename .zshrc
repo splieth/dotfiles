@@ -10,13 +10,16 @@ COMPLETION_WAITING_DOTS="true"
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
-plugins=(aws brew docker gcloud git go helm kubectl pass pipenv)
+plugins=(aws brew docker gcloud git helm kubectl pass pipenv)
 
 # Disable virtualenv left of prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=0
 
 # skdman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Add homebrew to path
+eval $(/opt/homebrew/bin/brew shellenv)
 
 # brew ZSH completion
 if type brew &>/dev/null; then
@@ -73,9 +76,7 @@ fi
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 # autojump
-if [ -f /usr/local/etc/autojump.sh ]; then
-  source /usr/local/etc/autojump.sh
-fi
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # Set py compiler stuf
 export CPPFLAGS=-I/usr/local/opt/openssl/include
