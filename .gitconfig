@@ -39,4 +39,4 @@
   UseHttpPath = true
 
 [gpg]
-	program = gpg
+  program = gpg
