@@ -50,3 +50,6 @@ function disk-encrypt2() {
 alias sort="gsort"
 alias tr="gtr"
 alias sed="gsed"
+
+# git
+alias git-shortstat="git shortlog -sn --no-merges"
