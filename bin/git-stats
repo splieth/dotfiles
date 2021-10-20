@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+function usage() {
+  echo "usage: $0 [--user <SOME_GIT_USER_NAME>]"
+  echo "        --user: a git user name. Defaults to user.name in git config"
+}
+
+GIT_USER="$(git config user.name)"
+while [[ $# -gt 0 ]]; do
+  key="$1"
+
+  case $key in
+  --user|-u)
+    GIT_USER="$2"
+    shift
+    shift
+    ;;
+  --help|-h)
+    usage
+    exit 0
+    shift
+    ;;
+  *)
+    shift
+    shift
+    ;;
+  esac
+done
+
+# https://gist.github.com/eyecatchup/3fb7ef0c0cbdb72412fc#gistcomment-2110405
+git log --shortstat --author="${GIT_USER}" | \
+  grep -E "fil(e|es) changed" | \
+  awk '{files+=$1; inserted+=$4; deleted+=$6; delta+=$4-$6; ratio=deleted/inserted} END {printf "Commit stats:\n- Files changed (total)..  %s\n- Lines added (total)....  %s\n- Lines deleted (total)..  %s\n- Total lines (delta)....  %s\n- Add./Del. ratio (1:n)..  1 : %s\n", files, inserted, deleted, delta, ratio }' -
