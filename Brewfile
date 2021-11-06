@@ -11,6 +11,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "pivotal/tap"
+tap "remotemobprogramming/brew"
 tap "sl1pm4t/k2tf", "https://github.com/sl1pm4t/k2tf.git"
 tap "splieth/igor"
 tap "splieth/swamp"
@@ -118,8 +119,8 @@ brew "pwgen"
 brew "python@3.8"
 brew "rustup-init"
 brew "sassc"
-brew "scala"
 brew "shellcheck"
+brew "shfmt"
 brew "sops"
 brew "telnet"
 brew "terraform-docs"
@@ -144,6 +145,7 @@ brew "zlib"
 brew "zsh"
 brew "zsh-completions"
 brew "gabrie30/utils/ghorg"
+brew "remotemobprogramming/brew/mob"
 brew "splieth/igor/igor", args: ["HEAD"]
 brew "splieth/swamp/swamp"
 brew "spring-io/tap/spring-boot"
@@ -209,6 +211,7 @@ mas "MoneyMoney", id: 872698314
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
+mas "Reeder", id: 1529448980
 mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
 mas "Xcode", id: 497799835
