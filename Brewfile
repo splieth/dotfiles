@@ -100,6 +100,7 @@ brew "moreutils"
 brew "nmap"
 brew "node"
 brew "nvm"
+brew "openconnect"
 brew "openfortivpn"
 brew "openshift-cli"
 brew "openvpn"
@@ -182,6 +183,7 @@ cask "keepassx"
 cask "macdown"
 cask "mactex"
 cask "microsoft-auto-update"
+cask "microsoft-office"
 cask "microsoft-teams"
 cask "miniconda"
 cask "mobster"
@@ -209,7 +211,6 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "MoneyMoney", id: 872698314
 mas "Numbers", id: 409203825
-mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
 mas "Things", id: 904280696
