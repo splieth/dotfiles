@@ -96,6 +96,7 @@ brew "libusb-compat"
 brew "mas"
 brew "maven"
 brew "minikube"
+brew "mkcert"
 brew "moreutils"
 brew "nmap"
 brew "node"
@@ -197,13 +198,13 @@ cask "spotify"
 cask "the-unarchiver"
 cask "tunnelblick"
 cask "upterm"
-cask "virtualbox"
 cask "visualvm"
 cask "vlc"
 cask "whatsapp"
 cask "wireshark"
 cask "xquartz"
 cask "zoom"
+mas "Dynamo", id: 1445910651
 mas "FitFileExplorer", id: 1244431640
 mas "Flashcard Hero", id: 650802274
 mas "GarageBand", id: 682658836
@@ -215,4 +216,5 @@ mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
 mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
+mas "Wipr", id: 1320666476
 mas "Xcode", id: 497799835
