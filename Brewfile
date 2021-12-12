@@ -21,7 +21,7 @@ tap "vitorgalvao/tiny-scripts"
 tap "wata727/tflint"
 tap "xen0l/taps"
 brew "ack"
-brew "activemq"
+brew "activemq", restart_service: true
 brew "age"
 brew "oniguruma"
 brew "jq"
@@ -45,7 +45,7 @@ brew "coreutils"
 brew "cscope"
 brew "libunistring"
 brew "curl"
-brew "dbus"
+brew "dbus", restart_service: true
 brew "go"
 brew "dep"
 brew "dive"
@@ -104,12 +104,11 @@ brew "nvm"
 brew "openconnect"
 brew "openfortivpn"
 brew "openshift-cli"
-brew "openvpn"
+brew "openvpn", restart_service: true
 brew "oras"
 brew "packer"
 brew "tree"
 brew "pass"
-brew "payara"
 brew "perl"
 brew "pgcli"
 brew "pinentry-mac"
@@ -133,7 +132,7 @@ brew "tfsec"
 brew "the_silver_searcher"
 brew "thefuck"
 brew "tig"
-brew "tomcat"
+brew "tomcat", restart_service: true
 brew "utf8proc"
 brew "vim"
 brew "watch"
@@ -170,12 +169,14 @@ cask "beamer"
 cask "bettertouchtool"
 cask "bluetility"
 cask "caffeine"
+cask "discord"
 cask "docker"
 cask "dropbox"
 cask "firefox"
 cask "flycut"
 cask "gimp"
 cask "google-cloud-sdk"
+cask "google-drive"
 cask "gpg-suite"
 cask "iterm2"
 cask "jetbrains-toolbox"
@@ -204,6 +205,7 @@ cask "whatsapp"
 cask "wireshark"
 cask "xquartz"
 cask "zoom"
+cask "zwift"
 mas "Dynamo", id: 1445910651
 mas "FitFileExplorer", id: 1244431640
 mas "Flashcard Hero", id: 650802274
@@ -211,6 +213,7 @@ mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "MoneyMoney", id: 872698314
+mas "Netmo", id: 1192219511
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
