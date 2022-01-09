@@ -112,7 +112,7 @@ brew "pass"
 brew "perl"
 brew "pgcli"
 brew "pinentry-mac"
-brew "pipenv", link: false
+brew "pipenv"
 brew "pre-commit"
 brew "pth"
 brew "pulumi"
