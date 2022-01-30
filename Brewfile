@@ -12,6 +12,7 @@ tap "homebrew/services"
 tap "pivotal/tap"
 tap "remotemobprogramming/brew"
 tap "sl1pm4t/k2tf", "https://github.com/sl1pm4t/k2tf.git"
+tap "splieth/formulae"
 tap "splieth/igor"
 tap "splieth/swamp"
 tap "wata727/tflint"
@@ -155,6 +156,7 @@ cask "gimp"
 cask "google-cloud-sdk"
 cask "google-drive"
 cask "gpg-suite"
+cask "istat-menus"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "jitsi-meet"
@@ -165,6 +167,7 @@ cask "microsoft-teams"
 cask "miniconda"
 cask "mobster"
 cask "obs"
+cask "portfolioperformance"
 cask "postman"
 cask "signal"
 cask "silverlight"
@@ -172,6 +175,7 @@ cask "slack"
 cask "spotify"
 cask "the-unarchiver"
 cask "tunnelblick"
+cask "tweetbot"
 cask "upterm"
 cask "visualvm"
 cask "vlc"
@@ -180,18 +184,15 @@ cask "wireshark"
 cask "xquartz"
 cask "zoom"
 cask "zwift"
-mas "Dynamo", id: 1445910651
-mas "FitFileExplorer", id: 1244431640
-mas "Flashcard Hero", id: 650802274
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "Meeter", id: 1510445899
+mas "Mic Drop", id: 1489816366
 mas "MoneyMoney", id: 872698314
 mas "Netmo", id: 1192219511
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
+mas "Spark", id: 1176895641
 mas "Things", id: 904280696
-mas "Toggl Track", id: 957734279
-mas "Wipr", id: 1320666476
+mas "Tweetbot", id: 1384080005
 mas "Xcode", id: 497799835
