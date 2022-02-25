@@ -67,6 +67,7 @@ brew "grep"
 brew "groovy"
 brew "hadolint"
 brew "helm"
+brew "htmlq"
 brew "htop"
 brew "hub"
 brew "hugo"
@@ -175,6 +176,7 @@ cask "signal"
 cask "silverlight"
 cask "slack"
 cask "spotify"
+cask "spotmenu"
 cask "the-unarchiver"
 cask "tunnelblick"
 cask "tweetbot"
@@ -186,6 +188,7 @@ cask "wireshark"
 cask "xquartz"
 cask "zoom"
 cask "zwift"
+mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
 mas "Meeter", id: 1510445899
 mas "Mic Drop", id: 1489816366
