@@ -153,7 +153,6 @@ cask "charles"
 cask "discord"
 cask "docker"
 cask "dropbox"
-cask "flycut"
 cask "gimp"
 cask "google-cloud-sdk"
 cask "google-drive"
@@ -188,16 +187,27 @@ cask "wireshark"
 cask "xquartz"
 cask "zoom"
 cask "zwift"
+mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
+mas "Desk Remote Control", id: 1509037746
+mas "GoodLinks", id: 1474335294
 mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
 mas "Mic Drop", id: 1489816366
 mas "MoneyMoney", id: 872698314
 mas "Netmo", id: 1192219511
+mas "Noir", id: 1592917505
+mas "Notability", id: 360593530
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Parcel", id: 639968404
+mas "Play", id: 1596506190
 mas "Reeder", id: 1529448980
 mas "Spark", id: 1176895641
+mas "Subtrack", id: 1519946553
 mas "Things", id: 904280696
+mas "Timery", id: 1425368544
 mas "Tweetbot", id: 1384080005
+mas "Vimari", id: 1480933944
 mas "Xcode", id: 497799835
