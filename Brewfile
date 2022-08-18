@@ -146,6 +146,7 @@ cask "1password-cli"
 cask "adobe-creative-cloud"
 cask "aerial"
 cask "alfred"
+cask "alt-tab"
 cask "appcleaner"
 cask "bartender"
 cask "bluetility"
@@ -153,6 +154,7 @@ cask "charles"
 cask "discord"
 cask "docker"
 cask "dropbox"
+cask "firefox"
 cask "gimp"
 cask "google-cloud-sdk"
 cask "google-drive"
@@ -176,6 +178,7 @@ cask "silverlight"
 cask "slack"
 cask "spotify"
 cask "spotmenu"
+cask "steam"
 cask "the-unarchiver"
 cask "tunnelblick"
 cask "tweetbot"
@@ -185,6 +188,7 @@ cask "vlc"
 cask "whatsapp"
 cask "wireshark"
 cask "xquartz"
+cask "yt-music"
 cask "zoom"
 cask "zwift"
 mas "AdBlock Pro", id: 1018301773
@@ -202,6 +206,7 @@ mas "Notability", id: 360593530
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
+mas "Pastebot", id: 1179623856
 mas "Play", id: 1596506190
 mas "Reeder", id: 1529448980
 mas "Spark", id: 1176895641
