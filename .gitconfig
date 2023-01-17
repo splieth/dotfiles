@@ -5,7 +5,7 @@
 [includeIf "gitdir:~/Projects/customers/"]
   path = .gitconfig-work
 [includeIf "gitdir:~/Projects/betaset/"]
-  path = .gitconfig-work
+  path = .gitconfig-betaset
 
 [color]
   branch = auto
