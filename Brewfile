@@ -17,19 +17,19 @@ tap "splieth/swamp"
 tap "wata727/tflint"
 tap "xen0l/taps"
 brew "ack"
+brew "gettext"
+brew "pkg-config"
+brew "openssl@1.1"
 brew "activemq"
 brew "age"
 brew "ant"
 brew "autoconf"
-brew "openssl@1.1"
 brew "autojump"
 brew "automake"
 brew "aws-iam-authenticator"
 brew "awscli"
 brew "bash"
 brew "c-ares"
-brew "gettext"
-brew "pkg-config"
 brew "checkov"
 brew "clojure"
 brew "coreutils"
@@ -148,6 +148,7 @@ cask "aerial"
 cask "alfred"
 cask "alt-tab"
 cask "appcleaner"
+cask "background-music"
 cask "bartender"
 cask "bluetility"
 cask "charles"
@@ -163,6 +164,7 @@ cask "istat-menus"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "jitsi-meet"
+cask "macdown"
 cask "mactex"
 cask "microsoft-auto-update"
 cask "microsoft-office"
@@ -187,10 +189,12 @@ cask "visualvm"
 cask "vlc"
 cask "whatsapp"
 cask "wireshark"
+cask "wkhtmltopdf"
 cask "xquartz"
 cask "yt-music"
 cask "zoom"
 cask "zwift"
+mas "1Password for Safari", id: 1569813296
 mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
 mas "Desk Remote Control", id: 1509037746
@@ -207,9 +211,9 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "Pastebot", id: 1179623856
-mas "Play", id: 1596506190
 mas "Reeder", id: 1529448980
 mas "Spark", id: 1176895641
+mas "Steam Link", id: 1246969117
 mas "Subtrack", id: 1519946553
 mas "Things", id: 904280696
 mas "Timery", id: 1425368544
