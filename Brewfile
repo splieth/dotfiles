@@ -37,8 +37,6 @@ brew "cscope"
 brew "libunistring"
 brew "curl"
 brew "dbus"
-brew "go"
-brew "dep"
 brew "dive"
 brew "exiftool"
 brew "findutils"
@@ -51,15 +49,16 @@ brew "git-lfs"
 brew "gnu-sed"
 brew "gnu-tar"
 brew "gnu-which"
-brew "libtool"
 brew "libevent"
 brew "libtasn1"
 brew "nettle"
+brew "libtool"
 brew "libksba"
 brew "libusb"
 brew "pinentry"
 brew "gnupg"
 brew "gnuplot"
+brew "go"
 brew "gopass"
 brew "gradle"
 brew "graphviz"
@@ -82,7 +81,6 @@ brew "kubernetes-cli"
 brew "krew"
 brew "kube-ps1"
 brew "kubectx"
-brew "kubeval"
 brew "leiningen"
 brew "libpq"
 brew "libu2f-host"
@@ -152,6 +150,7 @@ cask "background-music"
 cask "bartender"
 cask "bluetility"
 cask "charles"
+cask "cyberduck"
 cask "discord"
 cask "docker"
 cask "dropbox"
@@ -170,7 +169,6 @@ cask "microsoft-auto-update"
 cask "microsoft-office"
 cask "microsoft-teams"
 cask "miniconda"
-cask "miro"
 cask "mobster"
 cask "obs"
 cask "portfolioperformance"
@@ -183,7 +181,6 @@ cask "spotmenu"
 cask "steam"
 cask "the-unarchiver"
 cask "tunnelblick"
-cask "tweetbot"
 cask "upterm"
 cask "visualvm"
 cask "vlc"
@@ -197,12 +194,12 @@ cask "zwift"
 mas "1Password for Safari", id: 1569813296
 mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
+mas "AusweisApp2", id: 948660805
 mas "Desk Remote Control", id: 1509037746
 mas "GoodLinks", id: 1474335294
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
-mas "Mic Drop", id: 1489816366
 mas "MoneyMoney", id: 872698314
 mas "Netmo", id: 1192219511
 mas "Noir", id: 1592917505
@@ -211,12 +208,10 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "Pastebot", id: 1179623856
+mas "Play", id: 1596506190
 mas "Reeder", id: 1529448980
-mas "Spark", id: 1176895641
 mas "Steam Link", id: 1246969117
 mas "Subtrack", id: 1519946553
 mas "Things", id: 904280696
-mas "Timery", id: 1425368544
-mas "Tweetbot", id: 1384080005
 mas "Vimari", id: 1480933944
 mas "Xcode", id: 497799835
