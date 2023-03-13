@@ -151,6 +151,7 @@ cask "bartender"
 cask "bluetility"
 cask "charles"
 cask "cyberduck"
+cask "db-browser-for-sqlite"
 cask "discord"
 cask "docker"
 cask "dropbox"
@@ -176,11 +177,13 @@ cask "postman"
 cask "signal"
 cask "silverlight"
 cask "slack"
+cask "sloth"
 cask "spotify"
 cask "spotmenu"
 cask "steam"
 cask "the-unarchiver"
 cask "tunnelblick"
+cask "tyme"
 cask "upterm"
 cask "visualvm"
 cask "vlc"
@@ -210,8 +213,10 @@ mas "Parcel", id: 639968404
 mas "Pastebot", id: 1179623856
 mas "Play", id: 1596506190
 mas "Reeder", id: 1529448980
+mas "Screens", id: 1224268771
 mas "Steam Link", id: 1246969117
 mas "Subtrack", id: 1519946553
+mas "Tailscale", id: 1475387142
 mas "Things", id: 904280696
 mas "Vimari", id: 1480933944
 mas "Xcode", id: 497799835
