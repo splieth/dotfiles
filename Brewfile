@@ -158,18 +158,17 @@ cask "charles"
 cask "chatgpt"
 cask "cyberduck"
 cask "db-browser-for-sqlite"
+cask "devonthink"
 cask "discord"
 cask "docker"
+cask "downie"
 cask "dropbox"
-cask "firefox"
 cask "gimp"
 cask "google-cloud-sdk"
 cask "google-drive"
 cask "gpg-suite"
-cask "istat-menus"
 cask "iterm2"
 cask "jetbrains-toolbox"
-cask "jitsi-meet"
 cask "macdown"
 cask "mactex"
 cask "microsoft-auto-update"
@@ -183,11 +182,9 @@ cask "obs"
 cask "portfolioperformance"
 cask "postman"
 cask "scrivener"
-cask "signal"
 cask "silverlight"
 cask "slack"
 cask "sloth"
-cask "spotify"
 cask "spotmenu"
 cask "steam"
 cask "teamspeak-client"
@@ -209,6 +206,7 @@ mas "1Password for Safari", id: 1569813296
 mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
 mas "AusweisApp", id: 948660805
+mas "Bear", id: 1091189122
 mas "Desk Remote Control", id: 1509037746
 mas "GarageBand", id: 682658836
 mas "GoodLinks", id: 1474335294
@@ -231,6 +229,7 @@ mas "Steam Link", id: 1246969117
 mas "Subtrack", id: 1519946553
 mas "Tailscale", id: 1475387142
 mas "Things", id: 904280696
+mas "Ulysses", id: 1225570693
 mas "Vimari", id: 1480933944
 mas "Voice.ai", id: 6444030605
 mas "Whisper Transcription", id: 1668083311
