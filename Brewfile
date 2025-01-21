@@ -144,6 +144,7 @@ brew "splieth/igor/igor", args: ["HEAD"]
 brew "splieth/swamp/swamp"
 cask "1password"
 cask "1password-cli"
+cask "abbyy-finereader-pdf"
 cask "adobe-creative-cloud"
 cask "aerial"
 cask "alfred"
