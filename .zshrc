@@ -15,6 +15,9 @@ plugins=(aws brew docker gcloud git helm kubectl pass pipenv)
 # Disable virtualenv left of prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=0
 
+# custom stuff
+export PATH="$PATH:$HOME/.bin/private"
+
 # skdman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
@@ -85,6 +88,9 @@ export LDFLAGS=-L/usr/local/opt/openssl/lib
 # GPG
 export GPG_TTY=$(tty)
 
+# GO bin
+export PATH="${PATH}:${HOME}/go/bin/"
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
@@ -106,3 +112,9 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+source /Users/splieth/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
