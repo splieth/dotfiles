@@ -15,9 +15,6 @@ plugins=(aws brew docker gcloud git helm kubectl pass pipenv)
 # Disable virtualenv left of prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=0
 
-# custom stuff
-export PATH="$PATH:$HOME/.bin/private"
-
 # skdman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
