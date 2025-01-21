@@ -53,3 +53,6 @@ alias sed="gsed"
 
 # git
 alias git-shortstat="git shortlog -sn --no-merges"
+
+# icloud
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
